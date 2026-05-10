@@ -33,7 +33,9 @@ export default function Index() {
       <Link href="/subscriptions/abc" className="mt-3 p-4 ">
         Go to Subscription Details
       </Link>
-      <Link href={{ pathname: "subscriptions/[id]", params: { id: "claude" } }}>
+      <Link
+        href={{ pathname: "/subscriptions/[id]", params: { id: "claude" } }}
+      >
         Claude
       </Link>
     </SafeAreaView>
