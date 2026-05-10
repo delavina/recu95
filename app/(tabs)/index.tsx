@@ -1,15 +1,13 @@
 import { Link } from "expo-router";
-import { Text, View } from "react-native";
+import { styled } from "nativewind";
+import { Text } from "react-native";
+import { SafeAreaView as RNSafeAreaView } from "react-native-safe-area-context";
+
+const SafeAreaView = styled(RNSafeAreaView);
 
 export default function Index() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
+    <SafeAreaView className="flex-1 bg-background p-5">
       <Text className="text-2xl text-blue-500 font-mono">Recu95</Text>
       <Text className="mt-3 text-xs font-sans-boldß text-red-800">
         by Holger Koeppen
@@ -38,6 +36,6 @@ export default function Index() {
       <Link href={{ pathname: "subscriptions/[id]", params: { id: "claude" } }}>
         Claude
       </Link>
-    </View>
+    </SafeAreaView>
   );
 }
